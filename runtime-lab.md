@@ -33,11 +33,9 @@ This structure allows modular and scalable application development.
 Both Node.js and Bun were installed and verified successfully.
 
 Commands used:
+    node -v
+    bun -v
 
-```bash
-node -v
-bun -v
-```
 
 Both runtimes responded correctly, confirming proper installation and functionality.
 
@@ -51,14 +49,12 @@ Two simple applications were created:
         apps/hello-node/hello.js
 
     Example code:
-```bash
         console.log("Hello from Node.js runtime");
-```
+
 
     Executed using:
-```bash
         node hello.js
-```
+
 
 ### Bun Application
 
@@ -66,14 +62,11 @@ Two simple applications were created:
         apps/hello-bun/hello.js
 
     Example code:
-```bash
         console.log("Hello from Bun runtime");
-```
+
 
     Executed using:
-```bash
         bun run hello.js
-```
 
 Both applications executed successfully without errors.
 
@@ -85,9 +78,7 @@ Security testing was performed using both npm audit and Snyk CLI.
 ### npm audit
 
     Command used:
-```bash
         npm audit
-```
 
     Result:
     npm audit reported vulnerabilities related to development dependencies such as ESLint and minimatch. These vulnerabilities are associated with development tools and do not directly affect the runtime execution of the application.
@@ -96,10 +87,9 @@ Security testing was performed using both npm audit and Snyk CLI.
 ### Snyk CLI
 
     Commands used:
-```bash
         snyk auth
         snyk test --all-projects
-```
+
     Result:
     Snyk successfully scanned the project and reported:
     No vulnerable paths found
