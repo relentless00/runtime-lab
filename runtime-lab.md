@@ -45,34 +45,34 @@ Both runtimes responded correctly, confirming proper installation and functional
 
 Two simple applications were created:
 
-Node.js Application
+### Node.js Application
 
-File:
-    apps/hello-node/hello.js
+    File:
+        apps/hello-node/hello.js
 
-Example code:
+    Example code:
 ```bash
-    console.log("Hello from Node.js runtime");
+        console.log("Hello from Node.js runtime");
 ```
 
-Executed using:
+    Executed using:
 ```bash
-    node hello.js
+        node hello.js
 ```
 
-Bun Application
+### Bun Application
 
-File:
-    apps/hello-bun/hello.js
+    File:
+        apps/hello-bun/hello.js
 
-Example code:
+    Example code:
 ```bash
-    console.log("Hello from Bun runtime");
+        console.log("Hello from Bun runtime");
 ```
 
-Executed using:
+    Executed using:
 ```bash
-    bun run hello.js
+        bun run hello.js
 ```
 
 Both applications executed successfully without errors.
@@ -84,56 +84,57 @@ Security testing was performed using both npm audit and Snyk CLI.
 
 ### npm audit
 
-Command used:
+    Command used:
+```bash
+        npm audit
+```
 
-    npm audit
-
-Result:
-npm audit reported vulnerabilities related to development dependencies such as ESLint and minimatch. These vulnerabilities are associated with development tools and do not directly affect the runtime execution of the application.
-
-
-Snyk CLI
-
-Commands used:
-
-    snyk auth
-    snyk test --all-projects
-
-Result:
-Snyk successfully scanned the project and reported:
-No vulnerable paths found
-This confirms that there are no exploitable security vulnerabilities affecting the application runtime.
+    Result:
+    npm audit reported vulnerabilities related to development dependencies such as ESLint and minimatch. These vulnerabilities are associated with development tools and do not directly affect the runtime execution of the application.
 
 
+### Snyk CLI
 
-Runtime Comparison: Node.js vs Bun
-
-Node.js
-
-Advantages:
-Mature and stable runtime
-Large ecosystem and community support
-Widely used in production environments
-Strong support for real-time applications using WebSockets
-
-Disadvantages:
-Slower package installation compared to Bun
+    Commands used:
+```bash
+        snyk auth
+        snyk test --all-projects
+```
+    Result:
+    Snyk successfully scanned the project and reported:
+    No vulnerable paths found
+    This confirms that there are no exploitable security vulnerabilities affecting the application runtime.
 
 
-Bun
 
-Advantages:
-Faster startup and execution
-Built-in package manager
-Modern runtime with improved performance
+## Runtime Comparison: Node.js vs Bun
 
-Disadvantages:
-Smaller ecosystem
-Less mature compared to Node.js
-Limited production adoption
+### Node.js
+
+    Advantages:
+        Mature and stable runtime
+        Large ecosystem and community support
+        Widely used in production environments
+        Strong support for real-time applications using WebSockets
+
+    Disadvantages:
+        Slower package installation compared to Bun
 
 
-Runtime Recommendation for Real-Time Chat Application
+### Bun
+
+    Advantages:
+        Faster startup and execution
+        Built-in package manager
+        Modern runtime with improved performance
+
+    Disadvantages:
+        Smaller ecosystem
+        Less mature compared to Node.js
+        Limited production adoption
+
+
+## Runtime Recommendation for Real-Time Chat Application
 
 For a real-time chat application, Node.js is the recommended runtime environment. Node.js uses a non-blocking, event-driven architecture, which makes it efficient for handling multiple simultaneous connections. It has strong support for WebSockets and real-time communication libraries such as Socket.IO.
 
