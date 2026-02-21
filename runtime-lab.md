@@ -37,50 +37,52 @@ Commands used:
 ```bash
 node -v
 bun -v
+```
 
 Both runtimes responded correctly, confirming proper installation and functionality.
 
-Application Testing
+## Application Testing
 
 Two simple applications were created:
 
 Node.js Application
 
 File:
-
     apps/hello-node/hello.js
 
 Example code:
-
+```bash
     console.log("Hello from Node.js runtime");
+```
 
 Executed using:
-
+```bash
     node hello.js
-
+```
 
 Bun Application
 
 File:
-
     apps/hello-bun/hello.js
 
 Example code:
-
+```bash
     console.log("Hello from Bun runtime");
+```
 
 Executed using:
-
+```bash
     bun run hello.js
+```
 
 Both applications executed successfully without errors.
 
 
-Security Testing
+## Security Testing
 
 Security testing was performed using both npm audit and Snyk CLI.
 
-npm audit
+### npm audit
 
 Command used:
 
